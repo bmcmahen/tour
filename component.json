@@ -1,0 +1,29 @@
+{
+  "name": "tour",
+  "repo": "bmcmahen/tour",
+  "description": "a simple, minimalist tool for making web page guides/tours/help",
+  "version": "0.0.1",
+  "keywords": ["tour", "guide", "help"],
+  "dependencies": {
+    "bmcmahen/tip": "*",
+    "component/events": "1.0.9",
+    "yields/shortcuts": "0.2.0",
+    "component/classes": "1.2.1",
+    "component/emitter": "1.1.3",
+    "component/domify": "1.3.1"
+  },
+  "development": {
+    "component/aurora-tip": "*"
+  },
+  "templates": [
+    "template.html"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "tour.css"
+  ]
+}

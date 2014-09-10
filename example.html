@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="build/build.css" media="screen" title="build" charset="utf-8">
+  </head>
+
+  <style>
+
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+.Tour-showing {
+  -webkit-animation-name: pulse;
+    -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+  .tip {
+    max-width: 300px;
+    font-size: 14px;
+  }
+
+  #one {
+    background: whiteSmoke;
+    width: 300px;
+    height: 500px;
+  }
+
+  #two {
+    border: 5px solid black;
+    position: absolute;
+    top: 150px;
+    left: 410px;
+    width: 150px;
+    height: 50px;
+  }
+
+  #three {
+    background: black;
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+    width: 300px;
+    height: 200px;
+  }
+
+  .Tour-last button {
+    display: none;
+  }
+
+
+  </style>
+  <body>
+
+    <div id='one'>
+      This is area one. Hrm.
+    </div>
+
+    <div id='two'>
+      This is area two.
+    </div>
+
+    <div id='three'>
+      This is area three.
+    </div>
+
+    <button id='show'>Start Tour</button>
+
+    <script src='build/build.js'></script>
+    <script>
+
+    var helpText = [
+      'Consequat proident reprehenderit voluptate in consequat ea veniam amet ex eiusmod est. Aute qui dolor nisi ipsum excepteur nulla cupidatat non quis elit enim. Aliqua labore mollit elit qui ullamco amet adipisicing ipsum est nisi. Laboris in do elit veniam velit laborum adipisicing laboris mollit tempor commodo. Enim ea ullamco qui commodo sint. Laboris officia veniam ipsum magna reprehenderit.',
+      'And this is the middle',
+      'And here is the end. Sad?'
+    ];
+
+    var Tour = require('tour');
+    var tour = new Tour();
+    var els = document.getElementsByTagName('div');
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      tour.add(helpText[i], el);
+    }
+
+    document.getElementById('show').onclick = function(e){
+      tour.start();
+    };
+
+    </script>
+  </body>
+
+</html>
