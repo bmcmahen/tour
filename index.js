@@ -176,6 +176,7 @@ Tour.prototype.bind = function() {
   this.shortcuts.bind('esc', 'end');
   this.events = events(document, this);
   setTimeout(function(){
+    this.events.bind('touchstart', 'onclick');
     this.events.bind('click', 'onclick');
     this.events.bind('click [data-tour-next]', 'showNext');
     this.events.bind('click [data-tour-prev]', 'showPrev');
