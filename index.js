@@ -94,6 +94,7 @@ Tour.prototype.show = function (i) {
 
   // show tip
   next.tip.show(next.target);
+  next.tip.el.querySelector('.Tour').focus();
 
   // hide previous
   if (this.showing) {

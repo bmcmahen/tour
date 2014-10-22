@@ -2,7 +2,7 @@
   "name": "tour",
   "repo": "bmcmahen/tour",
   "description": "a simple, minimalist tool for making web page guides/tours/help",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "keywords": ["tour", "guide", "help"],
   "dependencies": {
     "bmcmahen/tip": "*",
